@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Tugas</title>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow p-3 mb-5 bg-body rounded ">
+            <div class="container container-fluid ">
+                <a class="navbar-brand " href="#"  >Covid 19 Di Dunia<span id="country"></span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" id="today" aria-current="page" href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" id="maincontent">
+      <div class="row justify-content-center my-5">
+          <div class="col-md-9">
+              <div class="card border-0 shadow">
+                  <div class="card-body">
+                      <form class="d-flex" role="search">
+                          <select class="form-select me-2" id="countries" aria-label="Default select example">
+                              <option disabled selected>Pilih Negara</option>
+                          </select>
+                      </form>
+                      <div class="" id="loader">
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+      <div class="row justify-content-center flex-wrap">
+          <div class="col-md-3 mb-2">
+              <div class="card">
+                  <div class="card-body">
+                      <div class="d-flex justify-content-center">
+                          <img src="src/assets/image/active-case.png" width="70%" alt="">
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <h4>Active Cases</h4>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <h2 class="text-success fw-bold" id="active-case">0</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 mb-2">
+              <div class="card">
+                  <div class="card-body">
+                      <div class="d-flex justify-content-center">
+                          <img src="src/assets/image/new-case.png" width="70%" alt="">
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <h4>New Cases</h4>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <h2 class="text-primary fw-bold" id="new-case">0</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 mb-2">
+              <div class="card">
+                  <div class="card-body">
+                      <div class="d-flex justify-content-center">
+                          <img src="src/assets/image/recovered-case.png" width="70%" alt="">
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <h4>Recovered Cases</h4>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <h2 class="text-warning fw-bold" id="recovered-case">0</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 mb-2">
+              <div class="card">
+                  <div class="card-body">
+                      <div class="d-flex justify-content-center">
+                          <img src="src/assets/image/total-case.png" width="70%" alt="">
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <h4>Total Cases</h4>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <h2 class="text-primary fw-bold" id="total-cases">0</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 mb-2">
+              <div class="card">
+                  <div class="card-body">
+                      <div class="d-flex justify-content-center">
+                          <img src="src/assets/image/total-death.png" width="70%" alt="">
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <h4>Total Deaths</h4>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <h2 class="text-danger fw-bold" id="total-deaths">0</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 mb-2">
+              <div class="card">
+                  <div class="card-body">
+                      <div class="d-flex justify-content-center">
+                          <img src="src/assets/image/total-test.png" width="70%" alt="">
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <h4>Total Tests</h4>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <h2 class="text-primary fw-bold" id="total-tests">0</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 mb-2">
+              <div class="card">
+                  <div class="card-body">
+                      <div class="d-flex justify-content-center">
+                          <img src="src/assets/image/populasi.png" width="70%" alt="">
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <h4>Total Populasi</h4>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <h2 class="text-warning fw-bold" id="populasi">0</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+  </div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
